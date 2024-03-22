@@ -20,3 +20,5 @@ export EDITOR='vim'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+alias aconda="source /Users/bognaflieger/.activate-conda"
+alias anvm="source /Users/bognaflieger/.activate-nvm"
