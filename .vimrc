@@ -13,3 +13,6 @@ set smarttab
 set nowrap
 set cursorline
 set number
+set list
+set listchars=tab:>-,space:.
+set relativenumber
