@@ -1,14 +1,6 @@
-# Enable Powerlevel11k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+export ZSH="/Users/$USER/.oh-my-zsh"
 
-
-export ZSH="/Users/bognaflieger/.oh-my-zsh"
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="simple"
 
 
 plugins=(git)
@@ -17,14 +9,17 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # ---START --- fzf configuration
 eval "$(fzf --zsh)"
 # --- END --- fzf configuration
 
 
-alias aconda="source /Users/bognaflieger/.activate-conda"
-alias anvm="source /Users/bognaflieger/.activate-nvm"
-alias apyenv="source /Users/bognaflieger/.activate-pyenv"
+alias aconda="source /Users/$USER/.activate-conda"
+alias anvm="source /Users/$USER/.activate-nvm"
+alias apyenv="source /Users/$USER/.activate-pyenv"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/$USER/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/$USER/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/$USER/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/$USER/opt/google-cloud-sdk/completion.zsh.inc'; fi
