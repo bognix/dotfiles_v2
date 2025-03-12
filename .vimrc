@@ -1,5 +1,7 @@
-set tabstop=2
-set softtabstop=2
+" https://stackoverflow.com/a/1878983/29448781
+set tabstop=8
+set softtabstop=0 noexpandtab
+set expandtab
 set shiftwidth=2
 set autoindent
 set smartindent
