@@ -4,7 +4,10 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 ZSH_THEME="simple"
 
 
-plugins=(git)
+plugins=(git vi-mode)
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+VI_MODE_SET_CURSOR=true
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -12,6 +15,11 @@ export EDITOR='vim'
 
 # ---START --- fzf configuration
 eval "$(fzf --zsh)"
+export FZF_ALT_C_OPTS="
+  --walker dir
+  --walker-root=/Users/$USER
+  --walker-skip .git,node_modules,target,Library
+  --preview 'tree -C {}'"
 # --- END --- fzf configuration
 
 
