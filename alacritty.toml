@@ -2,11 +2,14 @@ import = ["dracula.toml"]
 
 [window]
 option_as_alt = "OnlyLeft"
+
 [font]
 size = 14
 offset = {x = 0, y = 8}
+
 [selection]
 save_to_clipboard = true
+
 [keyboard]
 bindings = [
   { key = "Backspace", mods = "Alt", chars = "\u001B\u007F" },  # Alt + Backspace (Delete word before cursor)

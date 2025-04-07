@@ -1,7 +1,7 @@
 export PATH=/opt/homebrew/bin:~/opt/:$PATH:/Users/$USER/.local/bin
 export ZSH="/Users/$USER/.oh-my-zsh"
 
-ZSH_THEME="simple"
+ZSH_THEME="bgx"
 
 
 plugins=(git vi-mode)
@@ -47,3 +47,6 @@ alias sthttp="sed -i '' -e 's/https:/http:/g' courses.json"
 
 alias mwnl='docker exec -it mysql mysql -uroot -pwnl wnl -e "$@"'
 #--- BETHINK CHANGES END ---
+
+#---- CUSTOM ALIASES START ---
+alias gitprev='git checkout $(git reflog | awk "/checkout: moving from/ && !seen[\$NF]++ {print \$NF}" | head -n 2 | sed -n "2p")'
